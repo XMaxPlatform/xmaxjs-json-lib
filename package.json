@@ -1,0 +1,12 @@
+{
+    "name": "xmaxjs-json",
+    "version": "0.0.1",
+    "description": "Xmax blockchain abi struct in json format",
+    "main": "src/index.js",
+    "author": {
+        "name": ""
+    },
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {}
+}
