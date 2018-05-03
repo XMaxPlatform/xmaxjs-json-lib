@@ -1,5 +1,6 @@
 
 
 module.exports = {
-    api: require('./api')
+    api: require('./api'),
+    schema: require('./schema')
 }
