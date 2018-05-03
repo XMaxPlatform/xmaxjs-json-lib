@@ -1,0 +1,36 @@
+{
+    "get_account": {
+        "breif":"Get an account's information in blockchain.",
+        "params":{
+            "account_name": "name"
+        },
+        "results": {
+            "account_name": "name",
+            "xmx_token": "uint64"
+        }
+    },
+    "get_table_rows": {
+        "brief": "Retrive contract data from an account.",
+        "params": {
+            "json": { "type": "bool", "default": false},
+            "scope": "name",
+            "code": "name",
+            "table": "name",
+            "table_key": "string",
+            "lower_bound": {"type": "uint64", "default": "0"},
+            "upper_bound": {"type": "uint64", "default": "-1"},
+            "limit": {"type": "uint32", "default": "10"}
+        },
+        "results": {
+            "rows": {
+                "type": "vector",
+                "doc": "one row per item, either encoded as hex String or JSON object"
+            },
+            "more": {
+                "type": "bool",
+                "doc": "true if last element"
+            }
+        }
+    }
+
+}
