@@ -6,7 +6,13 @@
     "author": {
         "name": ""
     },
-    "scripts": {},
+    "scripts": {
+        "test": "mocha src/index.test.js src/**/*.test.js"
+    },
     "dependencies": {},
-    "devDependencies": {}
+    "devDependencies": {
+        "camel-case": "^3.0.0",
+        "xmaxjs-fcbuffer": "file:../xmaxjs-fcbuffer",
+        "mocha": "^3.4.2"  
+    }
 }
