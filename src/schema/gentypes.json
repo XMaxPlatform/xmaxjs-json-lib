@@ -2,6 +2,7 @@
     "account_name": "name",
     "permission_name": "name",
     "func_name": "name",
+    "event_name": "name",
     "message_name": "fixed_string32",
     "type_name": "fixed_string32",
     "account_permission": {

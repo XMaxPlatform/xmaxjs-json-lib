@@ -9,6 +9,38 @@
             "xmx_token": "uint64"
         }
     },
+    "get_info": {
+        "breif":"Get blockchain infomation.",
+        "params":null,
+        "results": {
+            "server_version": "string",
+            "head_block_num": "uint32",
+            "last_irreversible_block_num": "uint32",
+            "head_block_id": "fixed_bytes32",
+            "head_block_time": "time"
+
+        }
+    },
+    "get_block": {
+        "breif":"Get specific block info use id or block num.",
+        "params": {
+            "block_num_or_id": "string"
+        },
+        "results": {
+            "previous": "fixed_bytes32",
+            "timestamp": "time",
+            "transaction_merkle_root": "fixed_bytes32",
+            "builder": "name",
+            "builder_signature": "signature",
+            "threads": "thread[]",
+            "id": "fixed_bytes32",
+            "block_num": "uint32",
+            "ref_block_prefix": "uint32"
+        },
+        "errors": {
+            "unknown block": null
+          }
+    },
     "get_table_rows": {
         "brief": "Retrive contract data from an account.",
         "params": {
@@ -31,6 +63,25 @@
                 "doc": "true if last element"
             }
         }
-    }
+    },
+    "push_transaction": {
+        "brief": "Push a transaction to blockchain.",
+        "params": {
+            "signed_transaction": "signed_transaction"
+          },
+          "results": {
+            "transaction_id": "fixed_bytes32",
+            "processed": "bytes",
+            "events": "bytes"
+          }
+    },
+
+    "push_transactions": {
+        "brief": "Push multiple transactions to blockchain to process.",
+        "params": {
+          "signed_transaction[]": "signed_transaction"
+        },
+        "results": "vector[push_transaction.results]"
+      }
 
 }
