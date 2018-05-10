@@ -64,6 +64,29 @@
             }
         }
     },
+
+    "get_code": {
+        "brief": "Get smart contract code.",
+        "params": {
+            "account_name": "name"
+        },
+        "results": {
+            "account_name": "name",
+            "wast": "string",
+            "code_hash": "fixed_bytes32",
+            "abi": "optional<abi>"
+        }
+    },
+
+    "get_required_keys": {
+        "brief": "Get keys for signing transactions from provide candidates public keys.",
+        "params": {
+          "transaction": "transaction",
+          "available_keys": "set[public_key]"
+        },
+        "results": "set[public_key]"
+      },
+    
     "push_transaction": {
         "brief": "Push a transaction to blockchain.",
         "params": {
