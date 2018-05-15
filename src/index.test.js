@@ -13,7 +13,7 @@ describe('syntax', () => {
   }
 })
 
-const Fcbuffer = require('xmaxjs-fcbuffer')
+const Fcbuffer = require('xmaxjs-fcbuffer-lib')
 const schema = require('./schema')
 
 describe('fcbuffer', () => {

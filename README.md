@@ -1,1 +1,1 @@
-# xmaxjs-json
+# xmaxjs-json-lib
